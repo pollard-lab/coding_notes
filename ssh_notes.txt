@@ -1,0 +1,12 @@
+# connect to WWU vpn (wwu wireless netweork)
+https://securevpn.wwu.edu
+
+# connect to pollard PC
+# -X allows for forwarding of display screens
+ssh -X pollardlab@140.160.89.249
+
+# open nautilus and remote access files
+sftp://pollardlab@140.160.89.249
+
+# vnc remote desktop
+ssh -L 5901:127.0.0.1:5901 -N -f -l pollardlab 140.160.89.249
