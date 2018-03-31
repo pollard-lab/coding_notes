@@ -32,13 +32,14 @@ file.close()
 
 # RUN BASH IN PYTHON
 
-# run a single command
-def subprocess_cmd(command):
-    process = subprocess.Popen(command,stdout=subprocess.PIPE, shell=True)
+def bash_cmd(command):
+	"""
+	Calls a bash command and returns the standard output.
+	"""
+    process = subprocess.Popen(command, stdout=subprocess.PIPE, shell=True, cwd=os.curdir)
     proc_stdout = process.communicate()[0].strip()
-    print proc_stdout
+    print("BASH_cmd_stdout: {}".format(proc_stdout))
 
-subprocess_cmd('echo a; echo b')
 
 # GIT
 # General commands
@@ -74,7 +75,7 @@ git merge <branch_name>
 
 # Pushing Master to Remote
 git pull origin master  # checks and updates the branch before you add to it
-git push origin master  # pushes the changes
+git push <url to push to> master  # pushes the changes
 
 # Pushing Branch to Remote
 git checkout master
