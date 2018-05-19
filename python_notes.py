@@ -46,6 +46,7 @@ def bash_cmd(command):
 git status  # lists all the files in working_dir as git sees it
 git branch -a  # lists all branches on remote and local
 git remote -v  # lists information about remotes used
+git log  # see commit history
 
 # Initialize git repo
 cd <working_dir>  # cd to the dir that you want to start tracking
@@ -62,7 +63,7 @@ git diff  # lists the changes
 git add -A  # adds everything to the staging area (or could do 'git add [filename]')
 # git reset  # removes everything from staging area (or could do 'git reset [filename]')
 git commit -m "message for that commit"
-git log  # see logs
+
 
 # Cloning from Github
 git clone <url> <where_to_clone>  # clones an online repo to the local machine (git clone https./.../.../online_repo.git .)
