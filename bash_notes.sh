@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# copy command output to file and print the output to the console
+[command] |& tee [copy_of_output.txt]
+
 # Make file executable
 chmod u+rwx file.sh.py.whatever
 
