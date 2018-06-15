@@ -4,6 +4,7 @@
 cwd=$(basename $PWD)  # gets name of project
 # pull_address=$(echo "https://github.com/BrianSMiller/$cwd.git")
 
+
 # echo $pull_address
 git pull https://github.com/BrianSMiller/$cwd.git master
 git add -A
