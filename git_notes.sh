@@ -19,7 +19,7 @@ git checkout <branch_to_go_to>  # switches you to a branch
 git diff  # lists the changes
 git add -A  # adds everything to the staging area (or could do 'git add [filename]')
 # git reset  # removes everything from staging area (or could do 'git reset [filename]')
-git commit -m "message for that commit"
+git commit --all -m "message for that commit"
 
 
 # Cloning from Github

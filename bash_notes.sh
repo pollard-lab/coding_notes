@@ -1,13 +1,21 @@
 #!/bin/bash
 
 # copy command output to file and print the output to the console
-[command] |& tee [copy_of_output.txt]
+command |& tee copy_of_output.txt
 
 # Make file executable
-chmod u+rwx file.sh.py.whatever
+chmod u+rwx file.whatever
+# u = current user only gets to execute the file
+# + = adds changes to that file
+# r = read
+# w = write
+# x = execute
 
-echo "one">file.txt  # write to file, create if does not exist, replace if exsists
-echo "two">>file.txt  # append to the file
+>   # write to file, create if does not exist, replace if exists
+>>  # append to the file
 
-# list all files an dirs in curdir with sizes
+
 ls -hal
+# h = human readable, display filesizes in kilobytes (K), megabytes (M), or gigabytes (G)
+# a = all, show hidden files
+# l = diplay items in list format
