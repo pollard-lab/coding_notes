@@ -31,12 +31,15 @@ git branch --merged  # tells you what branches have been merged
 git checkout master
 git merge <branch_name>
 
+# Deleting Merged Branches
+git branch --merged  # tells you which branches are already merged and can be deleted
+git branch -d <branch_to_delete>
+git branch -a
+git push origin --delete <branch_to_delete>  # deletes the branch on 
+
 # Pushing Master to Remote
 git pull origin master  # checks and updates the branch before you add to it
 git push <url to push to> master  # pushes the changes
-
-
-https://github.com/BrianSMiller/coding_notes.git
 
 # Pushing Branch to Remote
 git checkout master
@@ -45,10 +48,6 @@ git push -u origin <branch_name>
 
 
 
-
-
-# Deleting Merged Branches
-git branch --merged  # tells you which branches are already merged and can be deleted
-git branch -d <branch_to_delete>
-git branch -a
-git push origin --delete <branch_to_delete>  # deletes the branch on 
+####
+git pull https://github.com/BrianSMiller/coding_notes.git master
+git push https://github.com/BrianSMiller/coding_notes.git master
